@@ -1,0 +1,144 @@
+:root {
+    --cor-fundo: #1a1a1a;
+    --cor-card: #2c2c2c;
+    --cor-texto-principal: #f0f0f0;
+    --cor-texto-secundario: #a0a0a0;
+    --cor-borda: #444;
+    --cor-azul: #007bff;
+    --cor-azul-hover: #0056b3;
+    --cor-amarelo: #FFD700; /* NOVA COR */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    display: flex;
+    flex-direction: column; /* Organiza o container e o footer verticalmente */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cep-container {
+    background-color: var(--cor-card);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--cor-borda);
+    margin-bottom: 40px; /* Espaço para o rodapé */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: var(--cor-azul);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+button {
+    padding: 0 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--cor-azul);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor-azul-hover);
+}
+
+.result-group {
+    display: grid;
+    gap: 15px;
+}
+
+.result-group label {
+    font-weight: 600;
+    color: var(--cor-texto-secundario);
+}
+
+.result-group input[type="text"]:disabled {
+    background-color: #222;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* --- NOVOS ESTILOS PARA O RODAPÉ --- */
+footer {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+}
+
+footer h3 {
+    color: var(--cor-amarelo);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: var(--cor-texto-principal);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--cor-amarelo);
+    transform: translateY(-3px);
+}
+
+.social-links svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+}
